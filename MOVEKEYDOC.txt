@@ -1,0 +1,74 @@
+
+My Oral Village, Inc
+242 Gainsborough Road, Toronto, Canada
+M4L 3C6
+rahul@oralimobile.com
+rahul@myoralvillage.org
+
+
+HEROKU SETUP + JENKINS
+______________________
+
+sudo snap install heroku --classic
+heroku login
+heroku plugins:install java
+heroku deploy:war /home/rahul/Downloads/jenkins.war --app jenkinsm
+heroku run bash -a jenkinsm
+heroku logs --app jenkinsm
+
+
+-------------------------
+
+Changes made into:
+Created an .arr referring to this URL:
+https://medium.com/@sgkantamani/how-to-create-an-android-archive-aar-library-f940cbf5280
+
+Modified AndroidManifest.xml
+
+Created raw folder -> added launch_video.mp4 (THIS VIDEO IS ONLY PART FOR MARTER BRANCH | NOT DEV BRANCH)
+
+Addded files in D:\ANDROID_Workspace\CCModuleDummy\app\src\main\java\com\cc\ccmoduledummy ( The host app structure)
+
+Addded files in D:\ANDROID_Workspace\CCModuleDummy\app\src\main\res\layout
+
+---------------------------
+
+Install Appium: npm install -g appium
+
+Install Appium-doctor:npm install  appium-doctor -g
+
+Install Appium client For Windows: http://appium.io/
+
+On your phone download & install APK Info app from Play store.
+
+You can but don't Start Appium (by executing <appium> on cmd)
+
+Set ANDROID_HOME = C:\Users\Lenovo\AppData\Local\Android\Sdk
+Set Path = C:\Users\Lenovo\AppData\Local\Android\Sdk\platform-tools
+ 
+
+
+Start Appium client on Windows - Click on Search button.
+
+Create a capability:
+{
+  "deviceName": "Galaxy M01s",
+  "udid": "R9BN800DK2J",
+  "platformName": "Android",
+  "platformVersion": "9",
+  "automationName": "UiAutomator2",
+  "appPackage": "com.sec.android.app.popupcalculator",
+  "appActivity": "com.sec.android.app.popupcalculator.Calculator"
+}
+
+Information in the above json about appPackage & appActivity can be fetched from APK Info app.
+
+Connect Phone and Laptop | Execute <adb devices> on cmd
+
+Train you app with Appium Client
+
+Run your code and see your mobile :)
+
+
+
+
